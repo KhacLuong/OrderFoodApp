@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_chicken"
+        android:title="@string/chicken" />
+    <item
+        android:id="@+id/menu_beef"
+        android:title="@string/beef" />
+    <item
+        android:id="@+id/menu_pork"
+        android:title="@string/pork" />
+    <item
+        android:id="@+id/menu_seafood"
+        android:title="@string/seafood" />
+    <item
+        android:id="@+id/menu_other_foods"
+        android:title="@string/other_food" />
+</menu>

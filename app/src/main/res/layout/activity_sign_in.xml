@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SignInActivity"
+    android:padding="@dimen/define_dimen_20">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/define_dimen_50">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_16"
+                android:text="@string/feedback_email"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_5"
+                android:background="@drawable/bg_white_shape_border_red"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/define_dimen_12"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_16"
+                android:text="@string/password"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_5"
+                android:background="@drawable/bg_white_shape_border_red"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:padding="@dimen/define_dimen_12"
+                android:textSize="@dimen/text_size_small"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/btn_sign_in"
+                android:layout_width="@dimen/define_dimen_200"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_red_shape_corner_6"
+                android:gravity="center"
+                android:padding="@dimen/define_dimen_10"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/define_dimen_22"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+
+</LinearLayout>

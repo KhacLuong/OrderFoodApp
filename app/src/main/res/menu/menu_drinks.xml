@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_smoothie"
+        android:title="@string/Smoothie" />
+    <item
+        android:id="@+id/menu_tea"
+        android:title="@string/tea" />
+    <item
+        android:id="@+id/menu_sweet_dessert_soup"
+        android:title="@string/sweet_dessert_soup" />
+    <item
+        android:id="@+id/menu_other_drinks"
+        android:title="@string/other_drinks" />
+</menu>

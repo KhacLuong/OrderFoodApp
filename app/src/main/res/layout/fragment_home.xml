@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_contentHome"
+    android:background="@color/white"
+
+    android:visibility="visible"
+
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_search_home"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/define_dimen_20"
+        android:layout_marginStart="@dimen/define_dimen_10"
+        android:layout_marginEnd="@dimen/define_dimen_10">
+
+        <EditText
+            android:id="@+id/edt_searchName_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_shape_border_red_corner_30"
+            android:hint="@string/hint_search_name"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:padding="@dimen/define_dimen_10"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/define_dimen_18"
+            tools:ignore="SpUsage" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/define_dimen_30"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/img_search_home"
+            android:background="@color/colorPrimaryDark"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_search_home"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_search_red"
+            android:padding="@dimen/define_dimen_5"
+            android:layout_marginEnd="@dimen/define_dimen_5"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_20">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/slide_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewpager_2"/>
+                <me.relex.circleindicator.CircleIndicator3
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/define_dimen_30"
+                    android:id="@+id/indicator3_home"
+                    android:layout_gravity="center"
+                    app:ci_drawable="@drawable/bg_indicatior_selected"
+                    app:ci_drawable_unselected="@drawable/bg_indicator_unselected"
+
+                    />
+            </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/menu_suggest_food"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/define_dimen_10"
+                            android:layout_marginTop="@dimen/define_dimen_10"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/food_suggest"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/define_dimen_16"
+                            android:textStyle="bold"
+                            tools:ignore="NestedWeights,SpUsage" />
+
+                        <TextView
+                            android:id="@+id/menu_foods"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/define_dimen_10"
+                            android:layout_marginTop="@dimen/define_dimen_10"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/food"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/define_dimen_16"
+                            android:textStyle="bold"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/menu_drinks"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/define_dimen_10"
+                            android:layout_marginTop="@dimen/define_dimen_10"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/drinks"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/define_dimen_16"
+                            android:textStyle="bold"
+                            tools:ignore="SpUsage" />
+                    </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rcv_food_home"
+                android:nestedScrollingEnabled="false"
+                android:focusable="false"
+                android:layout_marginStart="@dimen/define_dimen_10"
+                android:layout_marginBottom="@dimen/define_dimen_10"
+                />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
